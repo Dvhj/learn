@@ -1,0 +1,112 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Amatic SC', cursive;
+}
+
+.paral {
+	background-image: url('https://images.unsplash.com/photo-1654868739497-ee031a3d7088?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+	min-height: 400px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	font-size: 40px;
+	color: white;
+	text-shadow: 0px 0px 25px white;
+	padding: 40px;
+}
+
+.content {
+	height: 400px;
+	background-color: black;
+	font-size: 40px;
+	color: white;
+	padding: 40px;
+
+}
+
+.fokus{
+	transition: text-shadow 1s;
+	cursor: default;
+}
+.fokus:hover {
+	color: yellow;
+	text-shadow: 0px 0px 25px yellow;
+	transition: text-shadow 1s;
+}
+
+.shine {
+	height: 30vh;
+	background-color: #363636;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap: 20px;
+}
+
+.txt {
+	color: white;
+	border: 5px solid white;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5s;
+	cursor: default;
+	user-select: none; 
+}
+
+.txt:hover {
+	color: pink;
+	border: 5px solid pink ;
+	box-shadow: 0px 0px 25px pink;
+}
+
+.txt2 {
+	min-width: 150px;
+	font-size: 40px;
+	cursor: default;
+	user-select: none; 
+	color: cyan;
+}
+
+.btn {
+	width: 200px;
+	height: 70px;
+	background-color: cyan;
+	border-radius: 10px;
+	position: relative;
+	border:1px solid darkcyan;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+}
+
+.btn:before {
+	content:'';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: lightcyan;
+	transform: translate3d(0, 0.7em, -1em);
+	border-radius: inherit;
+	border:1px solid darkcyan;
+	box-shadow: 0 0 0 2px lightskyblue;
+
+}
+
+.btn:active {
+	transform: translate(0, 0.7em);
+}
+
+.btn:active:before {
+	transform: translate3d(0, 0em, -1em);
+	box-shadow: 0 0 0 2px lightskyblue;
+}
