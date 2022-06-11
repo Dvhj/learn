@@ -2,7 +2,42 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Amatic SC', cursive;
+	font-family: sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+}
+
+#top{
+	width: 100%;
+	height: 30vh;
+	background-image: url('https://images.unsplash.com/photo-1555323912-3526a765162b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1034&q=80');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.polygon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url('https://images.unsplash.com/photo-1647368817563-f00e432ed635?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80');
+	width: 200px;
+	height: 200px;
+	clip-path:polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+	transition: transform 0.4s;
+}
+
+.polygon:hover{
+	transform: scale(1.1);
 }
 
 .paral {
@@ -21,22 +56,25 @@
 }
 
 .content {
-	height: 400px;
+	height: 500px;
 	background-color: black;
 	font-size: 40px;
 	color: white;
-	padding: 40px;
+/*	padding: 40px;*/
+	text-align: justify;
+}
 
+.small{
+	height: 200px;
 }
 
 .fokus{
-	transition: text-shadow 1s;
+	transition: text-shadow 0.6s;
 	cursor: default;
 }
 .fokus:hover {
 	color: yellow;
 	text-shadow: 0px 0px 25px yellow;
-	transition: text-shadow 1s;
 }
 
 .shine {
@@ -46,6 +84,7 @@
 	justify-content: center;
 	align-items: center;
 	grid-gap: 20px;
+	flex-wrap: wrap;
 }
 
 .txt {
@@ -109,4 +148,57 @@
 .btn:active:before {
 	transform: translate3d(0, 0em, -1em);
 	box-shadow: 0 0 0 2px lightskyblue;
+}
+
+.card{
+	width: 500px;
+	height: 300px;
+	margin: 0 auto;
+	position: relative;
+	color: black;
+	perspective:1000px;
+	margin-top: 30px;
+	max-width: 90vw;
+	max-height: 55%;
+}
+
+.back p{
+	display: block;
+}
+
+.front, .back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backface-visibility:hidden;
+	transition: 1s;
+	border-radius: 10px;
+}
+
+
+.front img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.front h3{
+	mix-blend-mode: overlay;
+}
+
+.back {
+	background: lightgoldenrodyellow;
+	transform: rotateY(180deg);
+}
+
+.card:active .front{
+	transform: rotateY(180deg);
+}
+
+.card:active .back{
+	transform: rotateY(360deg);
 }

@@ -31,5 +31,9 @@ puk.addEventListener('click', () => {
 		}, i*300)
 	}
 
+	cont.style.background = color.value
 })
+
+
+let color = document.querySelector('.color')
 

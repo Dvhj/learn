@@ -7,7 +7,15 @@
 	<title>Learnnnn</title>
 </head>
 <body>
-	<div class="content">
+	<div id="top">
+		<div class="polygon">
+			<a href="#bottom">На дно</a>
+		</div>
+		<div class="polygon"></div>
+		<div class="polygon"></div>
+		<div class="polygon"></div>
+	</div>
+	<div class="content small">
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, dolor.
 	</div>
 	<div class="paral">
@@ -16,11 +24,29 @@
 	</div>
 	<div class="content">
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, dolor.
+		<div class="card">
+			<div class="front">
+				<img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="">
+				<h3>GODFATHER</h3>
+			</div>
+			<div class="back">
+				<p>-Виски <br> -Амаретто <br> -Лед <br> -Сбрызнуть апельсином</p>
+			</div>
+		</div>
 	</div>
-	<div class="shine">
+	<div class="shine" id="bottom">
 		<div class="txt">Vk</div>
+		<div class="txt">Lol</div>
 		<div class="txt2">lotrem</div>
 		<div class="btn puk">Go</div>
+		<input list="cocktails">
+		<datalist id="cocktails">
+			<option value="Белый русский">Водка, Коф.ликер, сливки</option>
+			<option value="Боярский">Водка. гренадин, табаско</option>
+			<option value="Мохито">Ром, мята, лайм,спрайт</option>
+		</datalist>
+		<input type="color" class="color">
+		<a href="#top">Вверх</a>
 	</div>
 	<script src="app.js"></script>
 </body>
